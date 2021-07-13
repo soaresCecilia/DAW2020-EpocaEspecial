@@ -18,8 +18,11 @@ router.get('/', function(req, res, next) {
 
 /* GET página team */
 router.get('/diploma/:id', function(req, res, next) {
-	axios.get('http://clav-api.dglab.gov.pt/v2/legislacao/' + req.params.id + '/processos?apikey=' + token)
-		.then(dados => res.render('diploma', {diploma: dados.data}))
+	axios.get('http://clav-api.dglab.gov.pt/v2/legislacao/' + req.params.id + '?apikey=' + token)
+		.then(dados => {
+      console.log(dados.data)
+      res.render('diploma', {diploma: dados.data})
+    })
 		.catch(erro => res.render('error', {error: erro}))
 })
 

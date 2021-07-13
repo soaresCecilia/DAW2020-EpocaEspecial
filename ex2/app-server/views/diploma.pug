@@ -2,16 +2,15 @@ extends layout
 
 block content
     header.w3-container.w3-margin
-        h1 #{diploma._id}
+        h1 Página Diploma #{diploma.id}
 
-        b codigo: 
-        | #{diploma.codigo}
+        b data: #{diploma.data}
         br
-        b titulo: 
-        | #{diploma.titulo}
+        b sumario: #{diploma.sumario}
         br
-        b id: 
-        | #{diploma.id}
+        b link: #{diploma.link}
+        br
+        b estado: #{diploma.estado}
         br
     
             
