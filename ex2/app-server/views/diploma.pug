@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    header.w3-container.w3-margin
+        h1 #{diploma._id}
+
+        b codigo: 
+        | #{diploma.codigo}
+        br
+        b titulo: 
+        | #{diploma.titulo}
+        br
+        b id: 
+        | #{diploma.id}
+        br
+    
+            
+
+    footer.w3-container
+        address.w3-right
+            a(href="/") 
+                button.w3-button.w3-margin Voltar

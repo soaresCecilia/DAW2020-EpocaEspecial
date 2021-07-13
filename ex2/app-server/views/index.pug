@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  .w3-container.w3-margin
+    table.w3-table-all
+      h1 Listas de Diplomas
+    
+      tr
+        th id
+        th data
+        th numero
+        th tipo 
+        th sumario
+        th
+      each l in diplomas
+        tr
+          td
+            a(href="/diploma/"+l.id) #{l.id} 
+
+          td=l.data
+          td=l.numero
+          td=l.tipo
+          td=l.sumario
+    
+    
+    footer.w3-container.w3-teal
+            p Página Inicial

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "PR.dtd">
+<pr>
+    <meta>
+        <key>DAW::Epoca Especial</key>
+        <title>Teste</title>
+        <bdate>13/07/2021</bdate>
+        <edate>13/07/2021</edate>
+        <supervisor>jcr</supervisor>
+    </meta>
+    <team>
+        <member id="A34900">
+            <name>Cecília da Conceição de Oliveira Soares</name>
+            <email>a34900@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+    <p>
+        Exercício 1:
+
+	<p>
+    Criar uma BD em MongoDB com uma coleção, de nome "alunos", para onde importarás o conteúdo do dataset JSON disponibilizado;
+    <p>
+        Retirei o "alunos": e executei
+        mongoimport -d EpocaEspecial -c alunos --jsonArray db.json
+		
+
+
+	<p>
+		      Exercício 2 , 
+	</p>
+	<p>
+		<b>2.1: Quantos Diplomas Legislativos estão catalogados? (pista: na API há uma rota que dá este número diretamente)</b>
+        R: http://clav-api.dglab.gov.pt/v2/legislacao?apikey=
+        <p>Depois fazemos find no postman por id, visto que todos têm de ter um id, e deu 4260 diplomas</p>
+	</p>
+    <p>
+		<b>2.2: Quantos diplomas do tipo "Despacho" estão catalogados? </b>
+            R: http://clav-api.dglab.gov.pt/v2/legislacao?apikey=
+            <p> Depois procurando no find pela palavra Despacho, encontramos 91 entradas.</p>
+	
+	</p>	
+    <p>
+		<b>2.3: Que processos são regulados pelo diploma "Lei 28/2016"? </b>
+            R: http://clav-api.dglab.gov.pt/v2/legislacao/leg_KKrJnLtEc1Hwqf5QgWJlZ/processos?apikey=
+            <p>
+            [
+    {
+        "codigo": "250.10.500",
+        "titulo": "Designação para cargos ou funções de confiança ou de interesse público",
+        "id": "c250.10.500"
+    },
+    {
+        "codigo": "250.10.501",
+        "titulo": "Designação para cargos de direção, coordenação e controlo",
+        "id": "c250.10.501"
+    }
+]
+	</p>	
+    <p>
+		<b>2.4: Que diplomas legislativos estão associados ao processo "c300.10.001"? </b>
+            R:
+	</p>
+	
+
+
+
+    </abstract>
+    <deliverables>
+
+        <link url="PR.xml">PR.xml</link>
+
+
+    </deliverables>
+</pr>
